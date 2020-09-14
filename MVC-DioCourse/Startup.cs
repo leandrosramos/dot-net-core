@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MVC_DioCourse.Models;
 
 namespace MVC_DioCourse
 {
@@ -24,6 +25,7 @@ namespace MVC_DioCourse
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<Context>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
